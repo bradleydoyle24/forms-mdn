@@ -8,6 +8,72 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <form action="action.url" method="post">
+    <textarea id="textarea" name="textarea" cols="30" rows="8">Textarea</textarea>
+  </form>
+  <fieldset>
+    <legend>Drop-Down</legend>
+    <h4>Select Box:</h1>
+    <label for="select">Pick a Food:</label>
+    <select name="select" id="select">
+      <optgroup label="fruits">
+        <option value="banana">Banana</option>
+        <option value="cherry" selected>Cherry</option>
+        <option value="lemon">Lemon</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option value="carrot">Carrot</option>
+        <option value="eggplant">Eggplant</option>
+        <option value="potato">Potato</option>
+      </optgroup>
+    </select>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Autocomplete Box</legend>
+    <label for="myFruit">What's your favorite fruit?</label> 
+    <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+    <datalist id="mySuggestion">
+      <option value="Apple">Apple</option>
+      <option value="Banana">Banana</option>
+      <option value="Blackberry">Blackberry</option>
+      <option value="Blueberry">Blueberry</option>
+      <option value="Lemon">Lemon</option>
+      <option value="Lychee">Lychee</option>
+      <option value="Peach">Peach</option>
+      <option value="Pear">Pear</option>
+    </datalist>
+  </fieldset>
+
+  <fieldset>
+    <legend>Autocomplete Box with Fallback</legend>
+    <label for="myFruit">What is your favorite fruit?</label>
+    <input type="text" name="fruit" id="myFruit" list="fruitList">
+
+    <datalist id="fruitList">
+      <label for="suggestion">or pick a fruit</label>
+      <select name="altFruit" id="suggestion">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Blackberry</option>
+        <option>Blueberry</option>
+        <option>Lemon</option>
+        <option>Lychee</option>
+        <option>Peach</option>
+        <option>Pear</option>
+      </select>
+    </datalist>
+  </fieldset>
+
+  <fieldset>
+    <legend>Meter</legend>
+    <meter min="0" max="100" low="33" high="66" optimum="50" value="75">75</meter>
+  </fieldset>
+
+  <fieldset>
+    <legend>Progress Bar</legend>
+    <progress max="100" value="75">75/100</progress>
+  </fieldset>
 </body>
 </html>
