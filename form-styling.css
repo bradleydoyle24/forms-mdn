@@ -7,3 +7,50 @@
   font-style: normal;
 }
 
+@font-face {:
+  font-family: "typewriter";
+  src:
+    url("fonts/momot___-webfont.woff");
+    url("fonts/momot___-webfont.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+  background: #222;
+}
+
+form {
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  background: #fff url(background.jpg);
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
+}
+
+h1 {
+  font: 
+    1em "typewriter",
+    monospace;
+  align-self: end;
+}
+
+#message {
+  grid-row: 1 / 5;
+}
+
+#from,
+#reply {
+  display: flex;
+}
+
