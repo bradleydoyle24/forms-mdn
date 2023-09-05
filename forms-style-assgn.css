@@ -1,0 +1,35 @@
+fieldset,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+li {
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+}
+
+fieldset {
+  position: relative;
+  width: calc(100vw - 1rem);
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+legend {
+  position: absolute;
+  top:0;
+  right: 0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: black;
+  background-color:lightgray;
+  border: solid 3px darkslategray;
+  border-radius: 10px;
+}
