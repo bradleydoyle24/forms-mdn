@@ -58,3 +58,9 @@ label {
   padding: var(--padding-value);
   margin: var(--margin-value);
 }
+
+button {
+  padding: var(--padding-value);
+  margin: var(--margin-value);
+  border-radius: 12px;
+}
