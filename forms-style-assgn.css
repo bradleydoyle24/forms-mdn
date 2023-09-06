@@ -1,35 +1,60 @@
+:root {
+  --padding-value: min(5px, 1vw);
+  --margin-value: min(5px, 1rem);
+  --large-value: 100px;
+}
+
 fieldset,
 ul,
-li {
+li,
+button,
+input,
+textarea
+select
+label {
   margin: 0;
   padding: 0;
+  width:auto;
+  box-sizing:content-box
+  font-size: inherit;
+  font-family: inherit;
 }
 
 ul {
-  margin: 1rem;
-  padding: 0.5rem;
+  list-style-type: none;
+  margin: var(--margin-value);
+  padding: var(--padding-value);
 }
 
 li {
   margin-left: 0.5rem;
-  padding: 0.3rem;
+  padding: var(--padding-value);
 }
 
 fieldset {
+  margin: var(--margin-value);
   position: relative;
-  width: calc(100vw - 1rem);
+  width: calc(100% - calc(2 * var(--padding-value)));
   border-radius: 10px;
   border: 2px solid black;
+  margin: var(--padding-value);
 }
 
 legend {
-  position: absolute;
-  top:0;
-  right: 0;
-  padding: 0.5rem;
-  margin: 0.5rem;
+  padding: var(--padding-value);
+  margin: var(--margin-value);
   color: black;
   background-color:lightgray;
   border: solid 3px darkslategray;
   border-radius: 10px;
+}
+
+select {
+  padding: var(--padding-value);
+  margin: var(--margin-value);
+}
+
+label {
+  padding: var(--padding-value);
+  margin: var(--margin-value);
 }
