@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pseudo-class.css">
+  <title>Pseudo-Classes</title>
+</head>
+<body>
+  <fieldset>
+    <legend>Select your favorite color</legend>
+    <ul>
+      <li>
+        <label for="black">Black</label>
+        <input type="radio" name="color" id="black" value="black">
+      </li>
+
+      <li>
+        <label for="pink">Pink</label>
+        <input type="radio" name="color" id="pink" value="pink">
+      </li>
+
+      <li>
+        <label for="yellow">Yellow</label>
+        <input type="radio" name="color" id="yellow" value="yellow">
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Feedback Form</legend>
+    <p>Required fields are labeled with "required".</p>
+    <div>
+      <label for="fname">First Name:</label>
+      <input type="text" name="fname" id="fname" required>
+      <span></span>
+    </div>
+  </fieldset>
+
+  <div>
+    <label for="fname">First name:</label>
+    <input type="text" name="fname" id="fname" required>
+    <span></span>
+  </div>
+
+  <div>
+    <label for="age">Age (must be 12+):</label>
+    <input type="number" name="age" id="age" min="12" 
+    max="120" required>
+  </div>
+
+  <form action="action">
+    <fieldset id="shipping">
+      <legend>Shipping address</legend>
+      <div> 
+        <label for="name1">Name:</label>
+        <input type="text" name="name1" id="name1" required>
+      </div>
+      <div>
+        <label for="address1">Address</label>
+        <input type="text" name="address1" id="address1" required>
+      </div>
+      <div>
+        <label for="pcode1">Zip/postalcode: </label>
+        <input type="text" name="pcode1" id="pcode1" required>
+      </div>
+    </fieldset>
+    <fieldset id="billing">
+      <legend>Billing address</legend>
+      <div>
+        <label for="billing-checkbox">Same as shipping address:</label>
+        <input type="checkbox" name="billing-checkbox" id="billing-checkbox" checked>
+      </div>
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" disabled required>
+      </div>
+      <div>
+        <label for="address2">Address: </label>
+        <input type="text" name="address2" id="address2" disabled required>
+      </div>
+      <div>
+        <label for="pcode2" class="billing-label disabled-label"> Zip/postal code: </label>
+        <input type="text" name="pcode2" id="pcode2" disabled required>
+      </div>
+    </fieldset>
+    <div><button>Submit</button></div>
+  </form>
+</body>
+<script src="pseudo-class.js"></script>
+</html>
