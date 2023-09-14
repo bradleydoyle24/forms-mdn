@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="built-in.css">
+  <title>Client-Side validation examples</title>
+</head>
+<body>
+  <fieldset>
+    <legend>Client side validation 1</legend>
+    <form action="action.com">
+      <ul>
+        <li>
+          <label for="choose">Would you prefer a banana or cherry? (required)</label>
+          <input type="text" name="i-like" id="choose" required
+          pattern="[Bb]anana|[Cc]herry">
+        </li>
+        <li>
+          <label for="autofill">Do you like apple, orange, or potato?</label>
+          <input type="text" name="fruit-fill" id="autofill" list="fruitlist" pattern="[Aa]pple|[Oo]range|[Pp]otato" required>
+          <datalist id="fruitlist">
+            <option value="apple">apple</option>
+            <option value="orange">orange</option>
+            <option value="potato">potato</option>
+          </datalist>
+        </li>
+        <li>
+          <label for="new">Here's another option: </label>
+          <input type="text" name="what" id="new" required>
+          <button>Submit</button>
+        </li>
+      </ul>
+    </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Client side validation 2</legend>
+    <form action="action">
+      <div>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input
+        type="text"
+        id="choose"
+        name="i-like2"
+        required
+        minlength="6"
+        maxlength="6">
+      </div>
+      <div>
+        <label for="number">How many would you like?</label>
+        <input type="number" name="amount" id="number" value="1"
+        min="1" max="10">
+      </div>
+      
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </fieldset>
+
+  <fieldset>
+    <legend>Full Example for Built-in Validation</legend>
+  </fieldset>
+</body>
+</html>
