@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="js-error.css">
+  <title>Javascript Created Form Error Messages</title>
+</head>
+<body>
+  <h1>Pick your favorite fruits!</h1>
+  <fieldset>
+    <legend>What is your favorite from these choices?</legend>
+    <ul>
+      <li>
+        <input type="radio" name="radio-favorite" id="radio-banana" value="banana">
+        <label for="radio-banana">Banana</label>
+      </li>
+      <li>
+        <input type="radio" name="radio-favorite" id="radio-apple" value="apple">
+        <label for="radio-apple">Apple</label>
+      </li>
+      <li>
+        <input type="radio" name="radio-favorite" id="radio-prune" value="prune" checked>
+        <label for="radio-prune">Prune</label>
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>What about your second favorite?</legend>
+    <label for="text-favorite">Here are some more options:</label>
+    <div>
+      <input type="text" name="text" id="text-favorite" list="text-fav-list">
+      <span></span>
+    </div>
+    <datalist id="text-fav-list">
+      <option>Monkeyfruit</option>
+      <option>Potato</option>
+      <option>Pear</option>
+      <option>Sweet Potato</option>
+      <option>Vegetable</option>
+      <option>Car Oil</option>
+      <option>Mango</option>
+      <option>Barn Owl</option>
+    </datalist>
+  </fieldset>
+</body>
+</html>

@@ -1,0 +1,54 @@
+input {
+  box-sizing: border-box;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: monospace;
+  margin: 12px;
+  height: 30px;
+  width: 200px;
+  position: relative;
+}
+
+input[type="radio"] {
+  position:relative;
+}
+
+input[type="radio"]:default::after{
+  position: relative;
+  content: "DEFAULT";
+  font-size: 12px;
+  left: 100px;
+  padding: 3px;
+  color: black;
+  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+input[type="text"] + label {
+  width: 100%;
+}
+
+input[type="text"] + div {
+  display: flex;
+  flex-flow: row wrap; 
+}
+
+input[type="text"] + span::after {
+  content: "Start typing to see options";
+  width: 0;
+}
