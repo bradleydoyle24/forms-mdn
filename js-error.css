@@ -13,7 +13,8 @@ li {
   box-sizing: border-box;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   border: 2px solid black;
   border-radius: 5px;
   font-family: monospace;
@@ -51,4 +52,18 @@ input[type="text"] + div {
 input[type="text"] + span::after {
   content: "Start typing to see options";
   width: 0;
+  font-size: 12px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 5px;
+  color: black;
+  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+
+fieldset > input[type="email"] {
+  display: flex;
+  padding: 5px;
 }
