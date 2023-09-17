@@ -62,8 +62,7 @@ input[type="text"] + span::after {
   border-radius: 5px;
 }
 
-
-fieldset > input[type="email"] {
+fieldset > form > div {
   display: flex;
   padding: 5px;
 }
