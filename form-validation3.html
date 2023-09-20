@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 3</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .error {
+        display: block;
+        width: fit-content;
+        padding 5px;
+        margin: 5px;
+        font-size: 1em;
+        color: white;
+        background-color: red;
+        border-radius: 0 0 12px 12px;
+        box-sizing: border-box;
+        left: 0;
+      }
+
+      .email-input {
+        display: flex;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="mail">I would like you to provide me with an e-mail address:</label>
+      <span class="email-input">
+        <input type="email" id="mail" name="mail" required minlength="10">
+        <span class="error" aria-live="polite"></span>
+      </span>
+      <button>Submit</button>
+    </form>
+  </body>
+  <script>
+    const email = document.getElementById("mail");
+    const emailError = document.querySelector("#mail + span.error")
+
+    email.addEventListener("input", (event) => {
+      if(email.validity.valid) {
+        emailError.textContent = "";
+        emailError.className = "error";
+      } else {
+        showError();
+      }
+    });
+    
+    function showError() {
+      if(email.validity.typeMismatch) {
+        emailError.textContent = "Type an email address, bozo";
+      } else if(email.validity.tooShort) {
+        emailError.textContent = "Longer, bro!";
+      }
+    }
+
+  </script>
+
+</html>
