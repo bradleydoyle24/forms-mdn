@@ -1,0 +1,90 @@
+button, label, 
+input[type="text"], input[type="email"] {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+body {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  padding: 20px;
+}
+
+fieldset > div {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 25px;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  content: "required";
+  position: absolute;
+  top: -35px;
+  left: -90px;
+
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+input:required:invalid + span::before {
+  content: "✘";
+  position: absolute;
+  left: 2px;
+  top: 5px;
+
+  color: red;
+  font-weight: bold;
+}
+
+input:required + span::before {
+  content: "✔️";
+  position: absolute;
+  left: 2px;
+  top: 5px;
+
+  color: green;
+  font-weight: bold;
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  vertical-align: -2px;
+  top:2px;
+
+  height: 1em;
+  width: 1em;
+  border: 1px solid gray;
+  color: green;
+}
+
+input[type="checkbox"]:checked::before {
+  visibility: visible;
+
+  content: "✔";
+  font-size: 1.2em;
+  position: relative;
+  bottom: 3px;
+  right: 1px;
+}
