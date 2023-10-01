@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="my-form-validation.css">
+  <title>My Form validation</title>
+</head>
+<body>
+  <form>
+    <fieldset class="form-container">
+      <legend>Feedback Form</legend>
+      <h4>Required fields marked with <span aria-label="required">*</span></h4>
+      <div>
+        <label for="fname">First Name:<span aria-label="required">*</span></label>
+        <input type="text" name="fname" id="fname" required>
+        <span></span>
+      </div>
+      <div>
+        <label for="lname">Last Name:<span aria-label="required">*</span></label>
+        <input type="text" name="lname" id="lname" required>
+        <span></span>
+      </div>
+      <div> 
+        <label for="email">
+          Email address if you want a response:
+        </label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div><button class="submit-button">Submit</button></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Checkboxes</legend>
+      <div>
+        <label>
+          <input type="checkbox" name="check-yes" id="check-yes">
+          Yes
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="check-no" id="check-no">
+          No
+        </label>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
