@@ -3,12 +3,17 @@ button,
 input,
 select,
 textarea {
+  display: block;
   font-family: inherit;
   font-size: 100%;
-  width: 150px;
+  width: 200px;
   padding: 0;
   margin: 0;
   box-sizing: border-box
+}
+
+fieldset {
+  margin-top: 15px;
 }
 
 input:required {
@@ -84,26 +89,96 @@ input:invalid + span::after {
 }
 
 input[type="checkbox"] {
+  margin-top: 5px;
+  display:inline-block;
   appearance: none;
-
   position: relative;
-  height: 1em;
   width: 1em;
-  border: solid 2px blue;
+  height: 1em;
   vertical-align: -2px;
+  border: 1px solid gray;
   color: green;
 }
 
-input[type="checkbox"]:checked::before {
-  content: "✔";
-  visibility: visible;
+input[type="checkbox"]::before {
   position: absolute;
-  top: -2px;
-  left: -0.2px;
-  font-weight: bolder;
+  right: -1px;
+  top: -0.2em;
+  visibility: hidden;
+  font-size: 1.2em;
+  content: "✔"
+}
+
+input[type="checkbox"]:checked::before {
+  visibility: visible;
 }
 
 input[type="text"]:invalid {
   outline: 2px solid crimson;
 }
 
+select {
+  appearance: none;
+  width: 200px;
+  height: 1.5em;
+  border-radius: 5px;
+  font: inherit;
+  padding-left: 3px;
+  margin-top: 5px;
+}
+
+.select-wrapper {
+  position: relative;  
+}
+
+.select-wrapper::after {
+  content: "⬇";
+  font-size: 1rem;
+  position: absolute;
+  left: 180px;
+  top: 0.4em;
+}
+
+
+#select-id-2 {
+  appearance: none;
+  height: 1.5em;
+  margin-top: 5px;
+}
+
+#select-id-2:hover,
+#select-id-2:focus {
+  appearance: none;
+}
+
+input[type="range"] {
+  appearance: none;
+  background: red;
+  height: 0.3em;
+  padding: 0;
+  outline: 1px solid transparent;
+}
+
+input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid rgb(169 169 169);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 5px 100px;
+}
+
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #ccc;
+}

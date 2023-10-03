@@ -88,3 +88,63 @@ input[type="checkbox"]:checked::before {
   bottom: 3px;
   right: 1px;
 }
+
+.select-wrapper {
+  position: relative;  
+}
+
+.select-wrapper::after {
+  content: "🖤";
+  position: relative;
+  font-size: 1.3em;
+  left: -1.3em;
+  font-weight: bold;
+  top: 0.1em;
+}
+
+select {
+  appearance: none;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  width: 20em;
+  height: 2em;
+  border-radius: 12px;
+  padding-left: 1em;
+}
+
+select::after {
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 256px;
+  height: 10px;
+  background-color:coral;
+  border-radius: 12px;
+  outline: 5px solid transparent;
+}
+
+input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  padding: 10px 20px;
+  text-align: center;
+  border: 2px solid gray;
+  border-radius: 5px;
+  line-height: .5em;
+  background: linear-gradient(to bottom, #555, #ddd);
+}
+
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, #777, #fff);
+}
+
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 5px 10px #ccc;
+}

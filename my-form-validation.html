@@ -46,6 +46,42 @@
         </label>
       </div>
     </fieldset>
+
+    <fieldset>
+      <legend>Selects/Datalists</legend>
+      <label for="select-id"></label>
+      <div class="select-wrapper">
+        <select name="select" id="select-id" list="datalist">
+          <optgroup label="First Options">
+            <option value="one">one</option>
+            <option value="two">two</option>
+          </optgroup>
+          <optgroup label="Second Options">
+            <option value="three">three</option>
+            <option value="potato">potato</option>
+          </optgroup>
+        </select>
+        <div class="select-wrapper">
+          <input name="select2" id="select-id-2" list="datalist">
+          </input>
+          <datalist id="datalist">
+            <option value="word">word</option>
+            <option value="place">place</option>
+            <option value="thing">thing</option>
+          </datalist>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Range</legend>
+      <label for="range">Drag thingy</label>
+      <input type="range" name="range" id="range" min="0" max="100" step="10">
+    </fieldset>
+    <fieldset>
+      <legend>File</legend>
+      <label for="file">Select a file</label>
+      <input type="file" name="file" id="file">
+    </fieldset>
   </form>
 </body>
 </html>
