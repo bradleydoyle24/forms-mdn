@@ -1,128 +1,123 @@
-button, label, 
-input[type="text"], input[type="email"] {
-  display: block;
-  font-family: inherit;
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
-  height: 30px;
-}
-
 body {
-  width: 450px;
-  margin-left: auto;
+  width: 500px;
   margin-right: auto;
+  margin-left: auto;
 }
 
-fieldset {
-  padding: 20px;
+button,
+label,
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  display: block;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 fieldset > div {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding-left: .5em;
+  width: 95%;
+  height: 2em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input + label {
+  width: 100%;
+}
+
+input:required:invalid {
+  outline: 2px solid red;
+  border-radius: 5px;
 }
 
 input + span {
   position: relative;
 }
 
-input:required + span::after {
-  content: "required";
-  position: absolute;
-  top: -35px;
-  left: -90px;
-
-  color: white;
-  background-color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-input:required:invalid + span::before {
+input:required:invalid + span::after {
+  color: red;
   content: "✘";
   position: absolute;
-  left: 2px;
-  top: 5px;
-
-  color: red;
-  font-weight: bold;
+  left: -7px;
+  top: 6px;
 }
 
-input:required + span::before {
+input:required + span:after {
+  color: green;
   content: "✔️";
   position: absolute;
-  left: 2px;
-  top: 5px;
-
-  color: green;
-  font-weight: bold;
-}
-
-input[type="checkbox"] + label {
-  display: inline;
+  left: -7px;
+  top: 6px;
 }
 
 input[type="checkbox"] {
   appearance: none;
-  position: relative;
-  vertical-align: -2px;
-  top:2px;
-
   height: 1em;
   width: 1em;
   border: 1px solid gray;
+  vertical-align: -2px;
+  position: relative;
   color: green;
 }
 
+
+label:hover > input[type="checkbox"] {
+  background-color: #88bbff;
+}
+
+label:active > input[type="checkbox"] {
+  background-color: #88ffff;
+}
+
 input[type="checkbox"]:checked::before {
-  visibility: visible;
-
   content: "✔";
-  font-size: 1.2em;
-  position: relative;
-  bottom: 3px;
-  right: 1px;
-}
-
-.select-wrapper {
-  position: relative;  
-}
-
-.select-wrapper::after {
-  content: "🖤";
-  position: relative;
-  font-size: 1.3em;
-  left: -1.3em;
-  font-weight: bold;
-  top: 0.1em;
+  position: absolute;
+  font-size: 1em;
 }
 
 select {
+  width: 200px;
   appearance: none;
-  font-size: 100%;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  width: 20em;
-  height: 2em;
-  border-radius: 12px;
-  padding-left: 1em;
+  height: 1.5em;
+  padding-left: .5em;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #ff0, #cc2);
 }
 
-select::after {
+.select-wrapper::after {
+  content: "↷";
+  font-size: 1.2em;
+  position: relative;
+  left: -1.2em;
+}
+
+select:hover {
+  background: linear-gradient(to bottom, #dd2, #aa0);
+}
+
+select:active {
+  background: linear-gradient(to bottom, #ff0, #cc2);
 }
 
 input[type="range"] {
   appearance: none;
-  width: 256px;
-  height: 10px;
-  background-color:coral;
+  width: 100%;
+  height: .5em;
+  background-color:burlywood;
   border-radius: 12px;
-  outline: 5px solid transparent;
+  border: 1px solid black;
+  color: black;
 }
 
 input[type="file"] {

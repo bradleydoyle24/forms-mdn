@@ -153,10 +153,11 @@ select {
 
 input[type="range"] {
   appearance: none;
-  background: red;
-  height: 0.3em;
-  padding: 0;
-  outline: 1px solid transparent;
+
+  background: purple;
+  height: .7em;
+  border-radius: 12px;
+  outline: 1px gray transparent;
 }
 
 input[type="file"] {
@@ -166,19 +167,17 @@ input[type="file"] {
 }
 
 label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169 169 169);
+  padding: 5px 50px;
+  border: 1px solid gray;
   border-radius: 5px;
-  text-align: center;
-  line-height: 1.5;
-  padding: 5px 100px;
+  box-shadow: 1px 1px 2pX gray;
+  background: linear-gradient(to bottom, #ddd, #aaa);
 }
 
 label[for="file"]:hover {
-  background: linear-gradient(to bottom, #fff, #ddd);
+  background: linear-gradient(to bottom, #eee, #999);
 }
 
 label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #fff, #666)
 }
