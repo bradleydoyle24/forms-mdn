@@ -82,6 +82,44 @@
       <label for="file">Select a file</label>
       <input type="file" name="file" id="file">
     </fieldset>
+
+    <fieldset class="validation">
+      <legend>Client side validation</legend>
+      <label for="choose">Prefer banana or cherry</label>
+      <input type="text" name="i-like" id="choose" required pattern="[Bb]anana|[Cc]herry" />
+      <label for="fig">Fig or no</label>
+      <input type="text" name="fig-no" id="fig" required pattern="[Ff]ig|[Nn]o" />
+      <label for="third">Here's a third (type yes/no)</label>
+      <input type="text" name="last-choice" id="third" required pattern="[Yy]es|[Nn]o" />
+      <button>Submit</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Min/Max length</legend>
+      <label for="low-length">Type a short word</label>
+      <input type="text" name="low" id="low-length" required minlength="1" maxlength="4" />
+      <label for="high-length">Type a long word</label>
+      <input type="text" name="high" id="high-length" required minlength="4" maxlength="200" />
+      <label for="number-limit">HOW MANY???</label>
+      <input type="number" name="number" id="number-limit" required min="3" max="100" />
+
+      <h4>Pick an option:</h4>
+      <ul>
+        <li>
+          <input type="radio" name="radio" id="Chunga" required>
+          <label for="Chunga">Chunga</label>
+        </li>
+        <li>
+          <input type="radio" name="radio" id="Chungo">
+          <label for="Chungo">Chungo</label>
+        </li>
+        <li>
+          <input type="radio" name="radio" id="Chungy">
+          <label for="Chungy">Chungy</label>
+        </li>
+      </ul>
+      <button>Submit</button>
+    </fieldset>
   </form>
 </body>
 </html>
