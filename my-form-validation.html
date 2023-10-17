@@ -8,18 +8,21 @@
   <title>My Form validation</title>
 </head>
 <body>
+  <h3 class="sticky">
+    Here are some form experimentations with validation!
+  </h3>
   <form>
     <fieldset class="form-container">
       <legend>Feedback Form</legend>
       <h4>Required fields marked with <span aria-label="required">*</span></h4>
       <div>
         <label for="fname">First Name:<span aria-label="required">*</span></label>
-        <input type="text" name="fname" id="fname" required>
+        <input type="text" name="fname" id="fname">
         <span></span>
       </div>
       <div>
         <label for="lname">Last Name:<span aria-label="required">*</span></label>
-        <input type="text" name="lname" id="lname" required>
+        <input type="text" name="lname" id="lname">
         <span></span>
       </div>
       <div> 
@@ -86,27 +89,30 @@
     <fieldset class="validation">
       <legend>Client side validation</legend>
       <label for="choose">Prefer banana or cherry</label>
-      <input type="text" name="i-like" id="choose" required pattern="[Bb]anana|[Cc]herry" />
+      <input type="text" name="i-like" id="choose" pattern="[Bb]anana|[Cc]herry" />
+
       <label for="fig">Fig or no</label>
-      <input type="text" name="fig-no" id="fig" required pattern="[Ff]ig|[Nn]o" />
+      <input type="text" name="fig-no" id="fig" pattern="[Ff]ig|[Nn]o" />
+
       <label for="third">Here's a third (type yes/no)</label>
-      <input type="text" name="last-choice" id="third" required pattern="[Yy]es|[Nn]o" />
+      <input type="text" name="last-choice" id="third" pattern="[Yy]es|[Nn]o" />
+
       <button>Submit</button>
     </fieldset>
 
     <fieldset>
       <legend>Min/Max length</legend>
       <label for="low-length">Type a short word</label>
-      <input type="text" name="low" id="low-length" required minlength="1" maxlength="4" />
+      <input type="text" name="low" id="low-length" minlength="1" maxlength="4" />
       <label for="high-length">Type a long word</label>
-      <input type="text" name="high" id="high-length" required minlength="4" maxlength="200" />
+      <input type="text" name="high" id="high-length" minlength="4" maxlength="200" />
       <label for="number-limit">HOW MANY???</label>
-      <input type="number" name="number" id="number-limit" required min="3" max="100" />
+      <input type="number" name="number" id="number-limit" min="3" max="100" />
 
       <h4>Pick an option:</h4>
       <ul>
         <li>
-          <input type="radio" name="radio" id="Chunga" required>
+          <input type="radio" name="radio" id="Chunga">
           <label for="Chunga">Chunga</label>
         </li>
         <li>
@@ -121,5 +127,19 @@
       <button>Submit</button>
     </fieldset>
   </form>
+  <form novalidate>
+    <fieldset>
+      <legend>More detailed validate</legend>
+    <p>
+      <label for="mail2">
+        <span>Please enter an email address:</span>
+        <input type="email" name="mail2" id="mail2" required minlength="8">
+        <span class="error" aria-live="polite"></span>
+      </label>
+    </p>
+    <button>Submit</button>
+  </fieldset>
+  </form>
+<script src="my-form-validation.js"></script>
 </body>
 </html>
