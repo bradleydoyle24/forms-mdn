@@ -1,0 +1,17 @@
+input {
+  border: 5px solid #0af;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: #f00;
+  border-style: dashed;
+  background-color: #aaa;
+}
+
+input:valid {
+  border-color: #0a0;
+  border-style:double;
+  background-color: #aaf;
+  
+}
